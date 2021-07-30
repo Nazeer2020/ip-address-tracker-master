@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+    font-size: 70%;
+}
+
+.container {
+    width: 365px;
+    margin: 0 auto;
+}
+
+.ip-search {
+    background-image: url("/images/pattern-bg.png");
+    background-size: cover;
+    height: 40vh;
+}
+
+.ip-search h1 {
+    padding: 10% 0;
+    color: #fff;
+}
+
+.ip-search input {
+    width: 80%;
+    height: 40px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px ;
+    border: none;
+}
+
+.ip-search button {
+    cursor: pointer;
+    display: inline-block;
+    width: 10%;
+    height: 42px ;
+    background-color: #000;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px ;
+    text-align: center;
+    border: none;
+    margin-left: -5px;
+    margin-bottom: -2px;
+}
+
+.search-result {
+    position: absolute;
+    background-color: #fff;
+    margin-top: -50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 340px;
+    border-radius: 10px;
+    box-shadow: 5px 5px -5px -5px;
+    z-index: 9999;
+}
+
+.search-result li {
+    
+    width: 90%;
+    margin: 40px auto;
+    font-size: 80%;
+    color: rgb(82, 78, 78);
+}
+
+.search-result i {
+    float: right;
+    margin: 10px;
+}
+
+.search-hide {
+    display: none;
+}
+
+.map {
+    height: 70vh;
+    
+}
+
+::placeholder {
+    font-size: 80%;
+    text-align: center;
+}
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1440px) and (min-width: 481px) {
+    .container {
+        width: 100%;  
+    } 
+
+   .container .map {
+        width: 100%;
+        
+    }
+
+    .ip-search h1 {
+        padding: 2% 0;
+        
+    }
+
+    .ip-search input {
+        width: 33%;
+      
+    }
+
+    .ip-search button {
+        width: 4%;
+    }
+
+    .search-result {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        height: 100PX;
+        margin-top: -110PX;
+        
+    }
+
+    .search-result li {
+        display: inline-block;
+        margin: 10px auto;
+        width: 20%;
+    }
+
+    
+}

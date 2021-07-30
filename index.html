@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  
+  
+</head>
+
+<body>
+  <div class="container">
+    <div class="ip-search">
+      <h1>IP Address Tracker</h1>
+      <input class="input" type="text" placeholder="Search for any IP address or domain"> <button class="btn"><img src="./images/icon-arrow.svg" alt="icon-arrow"></button>
+    </div>
+    <div class="search-result search-hide">
+      <i class="fal fa-times"></i>
+      <ul>
+        <li>
+          <h6>IP Address</h6><a class="IP" href="#"></a>
+        </li>
+        <li>
+          <h6>Location</h6><a class="Location" href="#"></a>
+        </li>
+        <li>
+          <h6>Timezone</h6><a class="Timezone" href="#"></a>
+        </li>
+        <!-- <li>
+          <h6>UTC</h6><a class="UTC" href="#"></a>
+        </li> -->
+        <li>
+          <h6>ISP</h6><a class="ISP" href="#"></a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="map" id="mapid">
+     
+    </div>
+  </div>
+  <script type="module" src="index.js"  defer></script>
+</body>
+
+</html>
