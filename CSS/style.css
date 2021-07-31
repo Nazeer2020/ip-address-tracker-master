@@ -31,7 +31,7 @@ a {
 }
 
 .ip-search {
-    background-image: url("/images/pattern-bg.png");
+    background-image: url("./images/pattern-bg.png");
     background-size: cover;
     height: 40vh;
 }
