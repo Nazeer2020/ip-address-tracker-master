@@ -11,9 +11,10 @@ const isp = document.querySelector(".ISP");
 const closeBtn = document.querySelector(".fa-times");
 
 
-import  {accessToken} from './apiKeys.js';
-import {apiKey}  from './apiKeys.js';
-
+// import  {accessToken} from './apiKeys.js';
+// import {apiKey}  from './apiKeys.js';
+const accessToken = "pk.eyJ1IjoibmF6ZWVyMjAyMCIsImEiOiJja3JyOHo4MzMwdWZrMnVwZjZ6ZjRvaXptIn0.XWq0WxoEnhPd86DO-udlEA";
+const apiKey = "at_NrjY9G95YIn3CNauSDO5EPnduYmD2";
 
 
 function gettingIP() {
