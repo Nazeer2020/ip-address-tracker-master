@@ -2,7 +2,7 @@
 
 const btn = document.querySelector(".btn");
 const searchResult = document.querySelector(".search-result");
-const input = Number(document.querySelector(".input").value);
+// const input = Number(document.querySelector(".input").value);
 const ip = document.querySelector(".IP");
 const loca = document.querySelector(".Location");
 const timeZone = document.querySelector(".Timezone");
@@ -20,7 +20,7 @@ const apiKey = "at_NrjY9G95YIn3CNauSDO5EPnduYmD2";
 
 function gettingIP() {
   const xhr = new XMLHttpRequest();
-  const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${input}`;
+  const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${document.querySelector(".input")}`;
   xhr.responseType = "json";
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
