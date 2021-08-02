@@ -11,8 +11,8 @@ const isp = document.querySelector(".ISP");
 const closeBtn = document.querySelector(".fa-times");
 
 
-import  {accessToken} from '/apiKeys.js';
-import {apiKey}  from '/apiKeys.js';
+import  {accessToken} from './apiKeys.js';
+import {apiKey}  from './apiKeys.js';
 
 
 
