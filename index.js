@@ -2,7 +2,7 @@
 
 const btn = document.querySelector(".btn");
 const searchResult = document.querySelector(".search-result");
-// const input = Number(document.querySelector(".input").value);
+const inputElement = Number(document.querySelector('.getting-IP').value);
 const ip = document.querySelector(".IP");
 const loca = document.querySelector(".Location");
 const timeZone = document.querySelector(".Timezone");
@@ -10,17 +10,18 @@ const utc = document.querySelector(".UTC");
 const isp = document.querySelector(".ISP");
 const closeBtn = document.querySelector(".fa-times");
 
-let mymap;
 
 // import  {accessToken} from './apiKeys.js';
 // import {apiKey}  from './apiKeys.js';
+
+let mymap;
+
 const accessToken = "pk.eyJ1IjoibmF6ZWVyMjAyMCIsImEiOiJja3JyOHo4MzMwdWZrMnVwZjZ6ZjRvaXptIn0.XWq0WxoEnhPd86DO-udlEA";
 const apiKey = "at_NrjY9G95YIn3CNauSDO5EPnduYmD2";
 
-
 function gettingIP() {
   const xhr = new XMLHttpRequest();
-  const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${document.querySelector(".input")}`;
+  const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${document.querySelector('.getting-IP').value}`;
   xhr.responseType = "json";
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -55,19 +56,24 @@ function gettingIP() {
   xhr.send();
 }
 
-window.onload = ()=>{
-    gettingIP();
-    searchResult.classList.remove("search-hide");
-};
+
+
+
 
 btn.addEventListener("click", () => {
     mymap.remove()
     searchResult.classList.remove("search-hide");
     gettingIP();
     console.log("I am called");
+    console.log(document.querySelector('.getting-IP').value);
   });
 
 
   closeBtn.addEventListener('click', ()=>{
     searchResult.classList.add("search-hide");
   })
+
+  window.onload = ()=>{
+    gettingIP();
+    searchResult.classList.remove("search-hide");
+};
