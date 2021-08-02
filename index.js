@@ -10,6 +10,7 @@ const utc = document.querySelector(".UTC");
 const isp = document.querySelector(".ISP");
 const closeBtn = document.querySelector(".fa-times");
 
+let mymap;
 
 // import  {accessToken} from './apiKeys.js';
 // import {apiKey}  from './apiKeys.js';
@@ -33,7 +34,7 @@ function gettingIP() {
       const getLat = `${xhr.response.location.lat}`;
       const getLng = `${xhr.response.location.lng}`;
 
-      var mymap = L.map("mapid").setView([`${getLat}`, `${getLng}`], 13);
+       mymap = L.map("mapid").setView([`${getLat}`, `${getLng}`], 13);
       var marker = L.marker([`${getLat}`, `${getLng}`]).addTo(mymap);
       L.tileLayer(
         `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
@@ -60,6 +61,7 @@ window.onload = ()=>{
 };
 
 btn.addEventListener("click", () => {
+    mymap.remove()
     searchResult.classList.remove("search-hide");
     gettingIP();
     console.log("I am called");
